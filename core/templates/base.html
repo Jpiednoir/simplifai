@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Simplif-'I{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <style>
+      .flip-card {
+        perspective: 1000px;
+        cursor: pointer;
+      }
+      .horizontal-scroll {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+      }
+      .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .flipped {
+        transform: rotateY(180deg);
+      }
+      .flip-front,
+      .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        font-weight: 500;
+      }
+      .flip-front {
+        background-color: #1f2937; /* gray-800 */
+      }
+      .flip-back {
+        background-color: #4f46e5; /* indigo-600 */
+        transform: rotateY(180deg);
+      }
+     
+      
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;     /* Firefox */
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;             /* Chrome, Safari, Opera */
+      }
+      body { font-family: 'Poppins', sans-serif; }
+    </style>
+  </head>
+
+  <body class="bg-gray-950 text-white relative overflow-x-hidden">
+
+    <!-- 🔝 NAVBAR -->
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="{% url 'home' %}" class="text-2xl font-bold text-indigo-400" style="font-family: 'Audiowide', sans-serif;">
+          SIMPLIF'AI
+        </a>
+
+        <!-- Menu -->
+        <nav class="hidden md:flex space-x-6 text-sm">
+          <a href="{% url 'home' %}" class="hover:text-indigo-300">Accueil</a>
+          <a href="{% url 'produits' %}" class="hover:text-indigo-300">Solutions</a>
+          <a href="{% url 'a_propos' %}" class="hover:text-indigo-300">À propos</a>
+          <a href="{% url 'contact' %}" class="hover:text-indigo-300">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden">
+          <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-white focus:outline-none">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu mobile -->
+      <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+        <a href="{% url 'home' %}" class="block text-sm hover:text-indigo-300">Accueil</a>
+        <a href="{% url 'produits' %}" class="block text-sm hover:text-indigo-300">Solutions</a>
+        <a href="{% url 'a_propos' %}" class="block text-sm hover:text-indigo-300">À propos</a>
+        <a href="{% url 'contact' %}" class="block text-sm hover:text-indigo-300">Contact</a>
+      </div>
+    </header>
+
+    <!-- 🔻 CONTENU DE LA PAGE -->
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- 🧾 FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-gray-700 mt-10">
+      &copy; 2025 Simplif'AI – L’intelligence accessible.
+    </footer>
+
+   
+    <!-- Script Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 70,
+            "density": { "enable": true, "value_area": 800 }
+          },
+          "color": { "value": "#888" },
+          "shape": { "type": "circle" },
+          "opacity": {
+            "value": 0.5,
+            "random": true
+          },
+          "size": {
+            "value": 3,
+            "random": true
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#555",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1.5,
+            "direction": "none",
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": false }
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 0.6 } }
+          }
+        },
+        "retina_detect": true
+      });
+    </script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".flip-card").forEach(card => {
+          card.addEventListener("click", () => {
+            card.querySelector(".flip-inner").classList.toggle("flipped");
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>

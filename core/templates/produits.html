@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Nos solutions IA - Simplif-AI{% endblock %}
+
+{% block content %}
+
+<section class="relative py-24 px-6 bg-gray-950 text-white overflow-hidden">
+
+
+  <!-- Contenu visible -->
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-12">Nos solutions IA</h1>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Carte 1 -->
+      <div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 shadow-xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-2">🤖 Copilotes IA</h3>
+        <p class="text-gray-300 text-sm">Des assistants contextuels qui analysent vos données en temps réel pour automatiser les décisions.</p>
+      </div>
+      <!-- Carte 2 -->
+      <div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 shadow-xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-purple-400 mb-2">📊 Modèles Prédictifs</h3>
+        <p class="text-gray-300 text-sm">Anticipez ventes, risques ou comportements avec nos algorithmes adaptés à vos cas d’usage.</p>
+      </div>
+      <!-- Carte 3 -->
+      <div class="bg-gray-800 bg-opacity-80 rounded-2xl p-6 shadow-xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-pink-400 mb-2">🔄 Automatisation</h3>
+        <p class="text-gray-300 text-sm">Gagnez en efficacité avec des flux IA connectés à vos outils existants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📚 Use Cases + FAQ -->
+<section class="mt-24 bg-gray-900 py-20 px-6 text-white">
+
+    
+    <!-- 🎯 Use Cases -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-center">🎯 Exemples concrets</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Correction d'examens, Scoring</h3>
+          <p class="text-gray-300 text-sm">Scoring d'une entrprise sur l abase des informations financieres disponibles et faits relatés dnas la presse, Attribution d'une note à une copie d'examens en fonctin des réponses attendues.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-indigo-400 mb-2">Maintenance prédictive</h3>
+          <p class="text-gray-300 text-sm">Réduction des coûts (20-30%) et des temps d'arrêt (30-50%) dans l'industrie manufacturière, applicable également aux équipements dans d'autres secteurs.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Optimisation des stocks</h3>
+          <p class="text-gray-300 text-sm">Anticiper les tandenaces de consomation et optimisez vos stocks en fonction des saisons.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Marketing ciblé et segmentation client</h3>
+          <p class="text-gray-300 text-sm">Prédiction du churn et personnalisation des offres pour améliorer la fidélisation client dans tous les secteurs.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Prévision des flux</h3>
+          <p class="text-gray-300 text-sm">Anticipation des besoins en trésorerie, gestion des impayés et optimisation du BFR pour tous types d'entreprises.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">Gestion de la qualité</h3>
+          <p class="text-gray-300 text-sm">Détection d'anomalies et prévention des défauts dans l'industrie, l'agroalimentaire et les services.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ❓ FAQ -->
+    <div>
+      <h2 class="text-3xl font-bold mb-8 text-center">❓ Questions fréquentes</h2>
+      <div class="space-y-6">
+
+        <div class="bg-gray-800 p-5 rounded-xl">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Dois-je avoir une équipe data pour utiliser Simplif-AI ?</h3>
+          <p class="text-gray-300 text-sm">Non, nos solutions sont conçues pour être utilisées par les métiers (marketing, finance, opérations) sans compétences techniques avancées.</p>
+        </div>
+
+        <div class="bg-gray-800 p-5 rounded-xl">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Peut-on intégrer vos IA à nos outils internes ?</h3>
+          <p class="text-gray-300 text-sm">Oui, via nos APIs REST ou intégrations no-code/low-code. Nous accompagnons aussi l’intégration technique si nécessaire.</p>
+        </div>
+
+        <div class="bg-gray-800 p-5 rounded-xl">
+          <h3 class="text-lg font-semibold text-indigo-400 mb-2">Quels types de données sont nécessaires ?</h3>
+          <p class="text-gray-300 text-sm">Des données structurées (Excel, CRM, ERP, etc.). Nous vous aidons à les préparer lors de la phase de cadrage.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

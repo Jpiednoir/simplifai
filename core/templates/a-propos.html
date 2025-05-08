@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}À propos - Simplif-AI{% endblock %}
+
+{% block content %}
+
+<section class="py-20 px-6 bg-gray-950 text-white">
+
+      <div class="max-w-5xl mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-6">🌍 Notre mission</h1>
+        <p class="text-gray-300 text-lg mb-8">
+          Chez <strong>Simplif-AI</strong>, nous croyons que l’intelligence artificielle doit être simple, responsable et au service des humains.
+          Notre mission : démocratiser l’accès à la performance augmentée par l’IA pour les PME, les grands groupes et les entrepreneurs ambitieux.
+        </p>
+        <a href="{% url 'contact' %}" class="inline-block bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-xl text-white transition">📬 Contactez-nous</a>
+      </div>
+
+  
+</section>
+
+<section class="py-20 px-6 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">🧠 Nos valeurs</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-2">Transparence</h3>
+        <p class="text-sm text-gray-300">Une IA éthique, explicable, sans boîte noire.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-2">Accessibilité</h3>
+        <p class="text-sm text-gray-300">Des solutions pensées pour les équipes métiers, pas uniquement les data scientists.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-2">Performance</h3>
+        <p class="text-sm text-gray-300">Une IA utile, concrète et mesurable pour vos processus clés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6 bg-gray-950 text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">👥 L’équipe Simplif-AI</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-gray-800 p-6 rounded-xl shadow">
+            <img src="https://via.placeholder.com/100" class="mx-auto mb-4 rounded-full border-4 border-indigo-500" alt="CEO">
+            <h3 class="text-lg font-semibold">Stéph</h3>
+            <p class="text-indigo-400 text-sm mb-1">Fondateur & CEO</p>
+            <p class="text-sm text-gray-300">20 ans d'expérience en digital et IA.</p>
+        </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <img src="https://via.placeholder.com/100" class="mx-auto mb-4 rounded-full border-4 border-indigo-500" alt="CEO">
+        <h3 class="text-lg font-semibold">Pierre</h3>
+        <p class="text-indigo-400 text-sm mb-1">Fondateur & Directeur Solutions</p>
+        <p class="text-sm text-gray-300">10 ans d’expérience en consulting IA et plateformes cloud. Visionnaire et pragmatique.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <img src="https://via.placeholder.com/100" class="mx-auto mb-4 rounded-full border-4 border-indigo-500" alt="CTO">
+        <h3 class="text-lg font-semibold">Patrick</h3>
+        <p class="text-indigo-400 text-sm mb-1">Fondateur & CTO</p>
+        <p class="text-sm text-gray-300">Architecte cloud et logiciel,  experrt Sécurité. Mène la tech IA avec passion et rigueur.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow">
+        <img src="https://via.placeholder.com/100" class="mx-auto mb-4 rounded-full border-4 border-indigo-500" alt="Product Designer">
+        <h3 class="text-lg font-semibold">Joce</h3>
+        <p class="text-indigo-400 text-sm mb-1">Fondateur & Directeur des opérations</p>
+        <p class="text-sm text-gray-300">Coordindation des équipes et des projets</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

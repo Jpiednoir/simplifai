@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Accueil - Simplif-AI{% endblock %}
+
+{% block content %}
+
+<!-- 🌟 Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-950 text-white overflow-hidden">
+  <!-- Fond animé -->
+  <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+  <!-- Contenu -->
+  <div class="relative z-10 flex justify-center flex-wrap gap-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-6">
+      Donnez vie à vos données et transformez votre business.
+    </h1>
+    <p class="text-lg text-gray-300 max-w-2xl mb-8 text-center">
+      Nous mettons notre plateforme et nos compétences à votre service et vous accompagnons dans votre transformation business. Adoptez nos solutions IAs as a Service et accélérez votre business dès maintenant.
+    </p>
+  </div>
+    <a href="{% url 'contact' %}" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl shadow-lg transition-all duration-300">
+      🚀 Demander une démo
+    </a>
+
+</section>
+
+<!-- 👥 À propos -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900 text-white relative overflow-hidden">
+
+  <!-- 🤖 Robot décoratif avec dégradé de fusion -->
+  <div class="absolute top-1/2 left-[10%] transform -translate-y-1/2 z-0 pointer-events-none opacity-70">
+    <img src="{% static 'images/robot-left.jpg' %}" alt="Robot IA" 
+         class="w-80 h-auto object-contain"
+         style="mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);" />
+  </div>
+
+  <!-- Contenu principal -->
+  <div class="relative z-10 max-w-4xl mx-auto text-left md:pl-[25%]">
+    <h2 class="text-3xl font-bold mb-4">Notre vision</h2>
+    <p class="text-gray-300 mb-6 leading-relaxed text-justify">
+      Simplif-AI est né de la conviction que l’intelligence artificielle doit être utile et accessible aux grandes entreprises comme aux ETIs et PMEs françaises. Ces deux dernières ne prennent malheureusement pas, ou peu, part aux discussions autour de l'IA, par manque de temps, de compétences ou d'argent. Simplif-AI vise à inviter les PME et ETIs françaises à la table des discussions en démocratisant l'accès à cette technologie du futur.
+    </p>
+    <a href="{% url 'contact' %}" class="text-indigo-400 underline hover:text-indigo-600">
+      En savoir plus
+    </a>
+  </div>
+</section>
+
+
+<!-- 💡 Solutions IA -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950 text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Nos solutions IA</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="tilt-card bg-gray-800 rounded-xl p-6 shadow transition-transform">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-400">🤖 Copilotes IA</h3>
+        <p class="text-gray-300">Des assistants virtuels intelligents intégrables à vos outils internes.</p>
+      </div>
+      <div class="tilt-card bg-gray-800 rounded-xl p-6 shadow transition-transform">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-400">📊 Modèles prédictifs</h3>
+        <p class="text-gray-300">Anticipez les comportements clients, les ventes, les risques avec nos algorithmes.</p>
+      </div>
+      <div class="tilt-card bg-gray-800 rounded-xl p-6 shadow transition-transform">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-400">🔄 Automatisation</h3>
+        <p class="text-gray-300">Gagnez en efficacité avec des workflows IA personnalisés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🎯 Cas d’usage -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900 text-white relative overflow-hidden">
+
+  <!-- 🤖 Robot décoratif à droite, fondu -->
+  <div class="absolute top-1/2 right-[10%] transform -translate-y-1/2 z-0 pointer-events-none opacity-70">
+    <img src="{% static 'images/robot-right.jpg' %}" alt="Robot IA décoratif"
+         class="w-80 h-auto object-contain"
+         style="mask-image: linear-gradient(to left, transparent, black 30%, black 70%, transparent); 
+                -webkit-mask-image: linear-gradient(to left, transparent, black 30%, black 70%, transparent);" />
+  </div>
+
+  <!-- Contenu décalé à gauche -->
+  <div class="relative z-10 max-w-6xl mx-auto md:pr-[40%] text-left">
+    <h2 class="text-3xl font-bold mb-8">Des bénéfices concrets</h2>
+    <div class="flex justify-start flex-wrap gap-4">
+      <div class="flip-card w-48 h-36">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front">🏢 PME</div>
+          <div class="flip-back text-sm">Simplifiez vos opérations avec une IA intuitive sans équipe tech.</div>
+        </div>
+      </div>
+      <div class="flip-card w-48 h-36">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front">🏛️ Grands comptes</div>
+          <div class="flip-back text-sm">Déployez des cas IA robustes et industrialisés.</div>
+        </div>
+      </div>
+      <div class="flip-card w-48 h-36">
+        <div class="flip-inner w-full h-full">
+          <div class="flip-front">🚀 Startups</div>
+          <div class="flip-back text-sm">Ajoutez de l’IA embarquée à votre produit.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 💬 Témoignages -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950 text-white relative overflow-hidden">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-8">
+
+    <!-- Image décorative à gauche, même hauteur que les cartes -->
+    <!-- Image décorative à gauche, fondue des deux côtés -->
+    <div class="hidden md:flex items-center justify-center w-full md:w-1/2 relative">
+      <div class="h-full flex items-center">
+        <img src="{% static 'images/hands.jpg' %}" alt="Illustration main"
+            class="h-full max-h-[280px] object-contain"
+            style="mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+                    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);" />
+      </div>
+    </div>
+
+    <!-- Cartes de témoignage à droite -->
+    <div class="w-full md:w-1/2 flex flex-col gap-4">
+      <h2 class="text-3xl font-bold mb-2 md:mb-4 text-center md:text-left">Ils nous font confiance</h2>
+
+      <div class="tilt-card bg-gray-800 rounded-xl px-5 py-4 shadow transition-transform">
+        <blockquote class="text-sm">
+          <p class="italic leading-relaxed">“Une solution IA puissante et facile à intégrer. En moins de 2 semaines, nous avions automatisé un processus critique.”</p>
+          <footer class="mt-3 text-indigo-300">— CTO, Startup FinTech</footer>
+        </blockquote>
+      </div>
+
+      <div class="tilt-card bg-gray-800 rounded-xl px-5 py-4 shadow transition-transform">
+        <blockquote class="text-sm">
+          <p class="italic leading-relaxed">“Un copilote IA intelligent et pertinent, parfaitement adapté à notre équipe commerciale.”</p>
+          <footer class="mt-3 text-indigo-300">— Responsable CRM, Groupe retail</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- 📚 Ressources -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-950 via-gray-950 to-gray-900 text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Notre approche</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="tilt-card bg-gray-800 p-6 rounded-xl shadow transition-transform">
+        <h3 class="text-lg font-semibold mb-2 text-indigo-400">Notre approche globale</h3>
+        <p class="text-gray-300 text-sm">Découvrez comment structurer votre projet IA en 5 étapes principales.</p>
+      </div>
+      <div class="tilt-card bg-gray-800 p-6 rounded-xl shadow transition-transform">
+        <h3 class="text-lg font-semibold mb-2 text-indigo-400">La phase clef du projet: l'analyse business</h3>
+        <p class="text-gray-300 text-sm">Découvrez comment nous conduisons cette premiere phase, essentielle à la réussite de votre projet</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📩 Contact -->
+<section class="py-20 px-6 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950 text-white text-center">
+  <h2 class="text-4xl font-bold mb-4">Prêt à accélérer avec l’IA ?</h2>
+  <p class="text-gray-200 mb-6">Contactez nous et étudions ensemble le spossibilité qui s'offrent à vous.</p>
+  <a href="{% url 'contact' %}" class="bg-white text-indigo-700 px-8 py-3 rounded-xl font-semibold shadow hover:bg-indigo-100 transition">
+    📬 Nous contacter
+  </a>
+</section>
+
+
+{% endblock %}
